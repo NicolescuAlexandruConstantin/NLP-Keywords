@@ -1,5 +1,7 @@
 from typing import Any, Dict, Set
 import spacy
+
+from algorithms.TF_IDF import TFIDF
 from stopword_manager import StopWordManager
 from algorithms.TextRank import TextRank
 from algorithms.RAKE import RAKE
@@ -17,6 +19,7 @@ class pipeline:
         self.textrank = TextRank(self.nlp, self.stopwords)
         self.rake = RAKE(self.nlp, self.stopwords)
         self.yake = YAKE(self.nlp, self.stopwords)
+        self.tfidf = TFIDF(self.nlp, self.stopwords)
 
     # Normalize and split all keywords into individual tokens
     def _token_set(self, keywords: Set[str]) -> Set[str]:
