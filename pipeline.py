@@ -1,7 +1,8 @@
 from typing import Any, Dict, Set
 import spacy
 from stopword_manager import StopWordManager
-from keyword_extractor import KeywordExtractor
+from algorithms.TextRank import TextRank
+from algorithms.RAKE import RAKE
 from utils import Normalizer
 
 class pipeline:
@@ -12,7 +13,8 @@ class pipeline:
         self.stopwords: Set[str] = StopWordManager.load()
 
         # Keyword extractor (RAKE + TextRank)
-        self.keyword_extractor = KeywordExtractor(self.nlp, self.stopwords)
+        self.textrank = TextRank(self.nlp, self.stopwords)
+        self.rake = RAKE(self.nlp, self.stopwords)
 
     # Normalize and split all keywords into individual tokens
     def _token_set(self, keywords: Set[str]) -> Set[str]:
@@ -23,8 +25,8 @@ class pipeline:
         doc = self.nlp(txt)
 
         # Keyword Extraction
-        rake_keywords = self.keyword_extractor.rake(txt)
-        textrank_keywords = self.keyword_extractor.textrank(doc)
+        rake_keywords = self.rake.extract(txt)
+        textrank_keywords = self.textrank.extract(doc)
 
         # Final Result
         return {
