@@ -5,6 +5,7 @@ from algorithms.TF_IDF import TFIDF
 from stopword_manager import StopWordManager
 from algorithms.TextRank import TextRank
 from algorithms.RAKE import RAKE
+from algorithms.YAKE import YAKE
 from utils import Normalizer
 
 class pipeline:
@@ -17,6 +18,7 @@ class pipeline:
         # Keyword extractor (RAKE + TextRank)
         self.textrank = TextRank(self.nlp, self.stopwords)
         self.rake = RAKE(self.nlp, self.stopwords)
+        self.yake = YAKE(self.nlp, self.stopwords)
         self.tfidf = TFIDF(self.nlp, self.stopwords)
 
     # Normalize and split all keywords into individual tokens
@@ -28,12 +30,14 @@ class pipeline:
         doc = self.nlp(txt)
 
         # Keyword Extraction
-        rake_keywords = self.rake.extract(txt)
+        rake_keywords = self.rake.extract(doc)
         textrank_keywords = self.textrank.extract(doc)
+        yake_keywords = self.yake.extract(doc)
 
         # Final Result
         return {
             "extractedText": txt,
             "rake": rake_keywords,
-            "textrank": textrank_keywords
+            "textrank": textrank_keywords,
+            "yake": yake_keywords
         }
