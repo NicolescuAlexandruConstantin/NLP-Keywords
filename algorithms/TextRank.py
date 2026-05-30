@@ -1,9 +1,7 @@
 from typing import Dict, List, Set, Union
 import numpy as np
 import spacy
-
 from algorithms.Commons import Commons
-from utils import Normalizer
 
 class TextRank(Commons):
     """Keyword extraction using the TextRank graph-based algorithm."""
