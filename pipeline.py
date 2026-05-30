@@ -26,18 +26,20 @@ class pipeline:
         return {Normalizer.norm(w) for kw in keywords for w in kw.split()}
 
     # Main method to perform text analysis and return all results
-    def analyze(self, txt: str) -> Dict[str, Any]:
+    def analyze(self, txt: str, top_k: int = 10) -> Dict[str, Any]:
         doc = self.nlp(txt)
-
+        self.tfidf.load_idf("ro_idf_cache.json")
         # Keyword Extraction
-        rake_keywords = self.rake.extract(doc)
-        textrank_keywords = self.textrank.extract(doc)
-        yake_keywords = self.yake.extract(doc)
+        rake_keywords = self.rake.extract(txt,top_k=top_k)
+        textrank_keywords = self.textrank.extract(doc,top_k=top_k)
+        yake_keywords = self.yake.extract(txt, top_k=top_k)
+        tf_idf_keywords = self.tfidf.extract(txt,top_k=top_k)
 
         # Final Result
         return {
             "extractedText": txt,
             "rake": rake_keywords,
             "textrank": textrank_keywords,
-            "yake": yake_keywords
+            "yake": yake_keywords,
+            "tf-idf": tf_idf_keywords
         }

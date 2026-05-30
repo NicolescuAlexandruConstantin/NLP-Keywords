@@ -1,0 +1,12 @@
+=== YAKE KEYWORDS ===
+
+  1. universitate stanford       | Score: 0.0003
+  2. folosi data colecta         | Score: 0.0010
+  3. luna aprilie                | Score: 0.0022
+  4. sistem avansa               | Score: 0.0030
+  5. recunoastere vocal          | Score: 0.0038
+  6. folosi data                 | Score: 0.0088
+  7. data colecta                | Score: 0.0093
+  8. deoarece procesare sine     | Score: 0.0100
+  9. cercetator                  | Score: 0.0103
+ 10. desfasura proiect           | Score: 0.0139

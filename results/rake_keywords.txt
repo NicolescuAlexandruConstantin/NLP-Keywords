@@ -1,0 +1,12 @@
+=== RAKE KEYWORDS ===
+
+  1. folosi data colecta            | Score: 9.0000
+  2. optimiza arhitectura model     | Score: 9.0000
+  3. deoarece procesare sine        | Score: 8.5000
+  4. deoarece timp                  | Score: 4.5000
+  5. universitate stanford          | Score: 4.0000
+  6. luna aprilie                   | Score: 4.0000
+  7. recunoastere vocal             | Score: 4.0000
+  8. desfasura proiect              | Score: 4.0000
+  9. limba natural                  | Score: 4.0000
+ 10. versiune anterior              | Score: 4.0000

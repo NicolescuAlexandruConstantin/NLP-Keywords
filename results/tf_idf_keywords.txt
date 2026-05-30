@@ -1,0 +1,12 @@
+=== TF-IDF KEYWORDS ===
+
+  1. vocal           | Score: 0.1893
+  2. deoarece        | Score: 0.1021
+  3. inginerii       | Score: 0.1020
+  4. seattle         | Score: 0.0946
+  5. acuratete       | Score: 0.0946
+  6. latenta         | Score: 0.0946
+  7. conversatie     | Score: 0.0946
+  8. stanford        | Score: 0.0894
+  9. testa           | Score: 0.0894
+ 10. hardware        | Score: 0.0894

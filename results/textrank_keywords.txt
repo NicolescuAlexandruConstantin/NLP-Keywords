@@ -1,0 +1,12 @@
+=== TEXTRANK KEYWORDS ===
+
+  1. aplicatie vocal        | Score: 2.7940
+  2. recunoastere vocal     | Score: 2.7913
+  3. dispozitiv mobil       | Score: 2.0636
+  4. arhitectura model      | Score: 2.0484
+  5. versiune anterior      | Score: 1.9616
+  6. factor critic          | Score: 1.9494
+  7. limba natural          | Score: 1.9309
+  8. luna aprilie           | Score: 1.9244
+  9. sistem                 | Score: 1.8258
+ 10. resursa hardware       | Score: 1.4426

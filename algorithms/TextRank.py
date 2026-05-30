@@ -42,7 +42,7 @@ class TextRank(Commons):
 
         # Step 3: Normalize matrix and run PageRank algorithm
         row_sums = adjacency_matrix.sum(axis=1, keepdims=True)
-        transition_matrix = np.divide(adjacency_matrix, row_sums, where=row_sums != 0)
+        transition_matrix = np.divide(adjacency_matrix, row_sums, out=np.zeros_like(adjacency_matrix), where=row_sums != 0)
         scores = np.random.rand(len(vocab_list)).astype(np.float32)
 
         while True:
